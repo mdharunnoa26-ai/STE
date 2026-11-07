@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>STE Digital Hub – হিসাব</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--tx:#0f1b2d;--mu:#5b6b82;--pr:#1d4ed8;--in:#15803d;--ex:#b91c1c;--bd:#dbe3ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -142,6 +146,7 @@ var claude={use:function(n){
   return Promise.resolve({status:"saved"});
  }});
 }};
+if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}
 </script>
 <script>
 (function(){
